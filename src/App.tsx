@@ -1,16 +1,15 @@
 import { VFC } from 'react'
 import React from 'react'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 
-type Props = {
-    name: string
-    age: string
-}
+import { Navbar } from './component/index'
+import GlobalStyle from './globalStyles'
 
-export const App: VFC<Props> = (props) => {
-    const { name, age } = props
+export const App: VFC = () => {
     return (
-        <p>
-            私は{name}で、年齢は{age}です
-        </p>
+        <BrowserRouter>
+            <GlobalStyle />
+            <Navbar></Navbar>
+        </BrowserRouter>
     )
 }
